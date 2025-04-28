@@ -1,6 +1,4 @@
-// src/components/MenuContainer.tsx
 "use client";
-
 import React, { useState, useEffect, useRef } from 'react';
 import { useInView, motion } from 'framer-motion';
 import MenuTabs from './MenuTabs';
@@ -11,6 +9,7 @@ import styles from '@/styles/menus/MenuContainer.module.scss';
 const MenuContainer: React.FC<{ menuItems: MenuItemProps[] }> = ({ menuItems }) => {
   const [activeTab, setActiveTab] = useState('entree');
   const [isSticky, setIsSticky] = useState(false);
+  const [viewOptions, setViewOptions] = useState({ amount: 0.9, once: false });
   
   const tabsRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
@@ -20,20 +19,31 @@ const MenuContainer: React.FC<{ menuItems: MenuItemProps[] }> = ({ menuItems }) 
   const dessertRef = useRef(null);
   const boissonRef = useRef(null);
   
-  const options = { 
-    amount: 0.9,
-    once: false
-  };
-  
-  const entreeInView = useInView(entreeRef, options);
-  const platInView = useInView(platRef, options);
-  const dessertInView = useInView(dessertRef, options);
-  const boissonInView = useInView(boissonRef, options);
+  useEffect(() => {
+    const updateViewOptions = () => {
+      const isSingleColumn = window.innerWidth <= 1200;
+      setViewOptions({
+        amount: isSingleColumn ? 0.3 : 0.9,
+        once: false
+      });
+    };
+    
+    updateViewOptions();
+
+    window.addEventListener('resize', updateViewOptions);
+    return () => window.removeEventListener('resize', updateViewOptions);
+  }, []);
+
+  const entreeInView = useInView(entreeRef, viewOptions);
+  const platInView = useInView(platRef, viewOptions);
+  const dessertInView = useInView(dessertRef, viewOptions);
+  const boissonInView = useInView(boissonRef, viewOptions);
   
   const entrees = menuItems.filter(item => item.category === 'entree');
   const plats = menuItems.filter(item => item.category === 'plat');
   const desserts = menuItems.filter(item => item.category === 'dessert');
   const boissons = menuItems.filter(item => item.category === 'boisson');
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +57,7 @@ const MenuContainer: React.FC<{ menuItems: MenuItemProps[] }> = ({ menuItems }) 
         }
       }
     };
-
+    
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     
@@ -75,7 +85,6 @@ const MenuContainer: React.FC<{ menuItems: MenuItemProps[] }> = ({ menuItems }) 
         <p className={styles.menuSubtitle}>Une expérience gastronomique unique</p>
       </div>
       
-     
       <div className={`${styles.tabsPlaceholder} ${isSticky ? styles.active : ''}`}></div>
       
       <motion.div
