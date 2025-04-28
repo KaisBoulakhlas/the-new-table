@@ -21,7 +21,7 @@ const AboutSection: React.FC = () => {
             Bienvenue chez The New Table, un espace gastronomique où tradition et innovation se rencontrent pour créer une expérience culinaire inoubliable. Notre Chef, passionné par les produits de saison et le terroir français, élabore une cuisine raffinée qui éveille les sens et raconte une histoire.
           </p>
           <p className={styles.description}>
-            Dans notre établissement, nous croyons que chaque plat doit être une œuvre d'art, méticuleusement préparée pour enchanter vos papilles et vous offrir un moment de plaisir absolu. Venez découvrir notre univers où l'excellence est servie à chaque table.
+            Dans notre établissement, nous croyons que chaque plat doit être une œuvre d&apos;art, méticuleusement préparée pour enchanter vos papilles et vous offrir un moment de plaisir absolu. Venez découvrir notre univers où l&apos;excellence est servie à chaque table.
           </p>
         </motion.div>
         

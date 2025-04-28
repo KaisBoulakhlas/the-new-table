@@ -83,7 +83,7 @@ const ReviewsSection: React.FC = () => {
         >
           <h2 className={styles.title}>Avis de nos clients</h2>
           <div className={styles.decorativeLine}></div>
-          <p className={styles.subtitle}>Découvrez ce que pensent nos clients de leur expérience à La Nouvelle Table</p>
+          <p className={styles.subtitle}>Découvrez ce que pensent nos clients de leur expérience chez The New Table</p>
           
           <div className={styles.ratingOverview}>
             <div className={styles.averageRating}>
@@ -175,7 +175,7 @@ const ReviewsSection: React.FC = () => {
           viewport={{ once: true }}
         >
           <h3 className={styles.ctaTitle}>Avez-vous visité notre restaurant ?</h3>
-          <p className={styles.ctaText}>Partagez votre expérience et aidez d'autres clients à découvrir La Nouvelle Table</p>
+          <p className={styles.ctaText}>Partagez votre expérience et aidez d&apos;autres clients à découvrir The New Table</p>
           <a 
             href={`https://search.google.com/local/writereview?placeid=${process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID || ''}`}
             target="_blank" 

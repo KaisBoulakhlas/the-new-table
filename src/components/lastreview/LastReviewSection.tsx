@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaStar, FaStarHalfAlt, FaRegStar, FaQuoteLeft, FaQuoteRight, FaArrowRight } from 'react-icons/fa';
@@ -41,7 +40,7 @@ const LastReviewSection = async () => {
         <div className={styles.header}>
           <h2 className={styles.title}>Ce que nos clients disent</h2>
           <div className={styles.decorativeLine}></div>
-          <p className={styles.subtitle}>Découvrez le dernier avis laissé par l'un de nos clients</p>
+          <p className={styles.subtitle}>Découvrez le dernier avis laissé par l&apos;un de nos clients</p>
         </div>
         
         <div className={styles.reviewCard}>
