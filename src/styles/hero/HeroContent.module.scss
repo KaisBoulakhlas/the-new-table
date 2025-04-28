@@ -1,0 +1,77 @@
+.heroContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  padding: 0 1rem;
+  
+  @media (min-width: $breakpoint-sm) {
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    gap: 2rem;
+  }
+}
+
+.heroContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    gap: 4rem;
+  }
+  
+  @media (min-width: $breakpoint-xl) {
+    gap: 6rem;
+  }
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: $primary-color;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-dancing-script), cursive;
+  
+  @media (min-width: $breakpoint-sm) {
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+}
+
+.heroImage {
+  margin: 0.5rem 0;
+  width: 40px !important;
+  height: auto !important;
+  
+  @media (min-width: $breakpoint-sm) {
+    width: 50px !important;
+  }
+  
+  @media (min-width: $breakpoint-md) {
+    margin: 0;
+    width: 60px !important;
+  }
+}

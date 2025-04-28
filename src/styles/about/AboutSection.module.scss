@@ -1,0 +1,210 @@
+.aboutSection {
+  padding: 3rem 1rem;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
+  
+  @media (min-width: $breakpoint-sm) {
+    padding: 4rem 1.5rem;
+  }
+  
+  @media (min-width: $breakpoint-md) {
+    padding: 6rem 2rem;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    padding: 8rem 2rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  @media (min-width: $breakpoint-sm) {
+    gap: 3rem;
+  }
+  
+  @media (min-width: $breakpoint-md) {
+    gap: 4rem;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    align-items: center;
+    gap: 6rem;
+  }
+
+  @media (min-width: 1500px) {
+    flex-direction: row;
+  }
+}
+
+.textContent {
+  max-width:600px;
+  margin:0 auto;
+}
+
+.title {
+  font-size: 2rem;
+  color: $primary-color;
+  margin-bottom: 1rem;
+  text-align: center;
+  
+  @media (min-width: $breakpoint-sm) {
+    font-size: 2.3rem;
+  }
+  
+  @media (min-width: $breakpoint-md) {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    font-size: 3.5rem;
+  }
+}
+
+.decorativeLine {
+  width: 60px;
+  height: 2px;
+  background-color: $primary-color;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  
+  @media (min-width: $breakpoint-md) {
+    width: 80px;
+  }
+  
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    @media (min-width: $breakpoint-md) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  
+  &::before {
+    left: -4px;
+    
+    @media (min-width: $breakpoint-md) {
+      left: -5px;
+    }
+  }
+  
+  &::after {
+    right: -4px;
+    
+    @media (min-width: $breakpoint-md) {
+      right: -5px;
+    }
+  }
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  width:100%;
+  text-align: center;
+  
+  @media (min-width: $breakpoint-sm) {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  @media (min-width: $breakpoint-md) {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.imageContainer {
+  width: 100%;
+  position: relative;
+  height: 320px;
+  margin: 0 auto;
+  max-width: 500px;
+  
+  @media (min-width: $breakpoint-sm) {
+    height: 380px;
+  }
+  
+  @media (min-width: $breakpoint-md) {
+    height: 450px;
+    max-width: 600px;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    height: 500px;
+  }
+}
+
+.mainImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 70%;
+  z-index: 1;
+  border: 3px solid $primary-color;
+  overflow: hidden;
+  
+  @media (min-width: $breakpoint-sm) {
+    border: 4px solid $primary-color;
+  }
+  
+  @media (min-width: $breakpoint-md) {
+    width: 70%;
+    height: 70%;
+    border: 5px solid $primary-color;
+  }
+}
+
+.secondaryImageWrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 65%;
+  height: 60%;
+  z-index: 2;
+  border: 3px solid $primary-color;
+  overflow: hidden;
+  
+  @media (min-width: $breakpoint-sm) {
+    width: 62%;
+    border: 4px solid $primary-color;
+  }
+  
+  @media (min-width: $breakpoint-md) {
+    width: 58%;
+    height: 55%;
+    border: 5px solid $primary-color;
+  }
+}
+
+.mainImage, .secondaryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}

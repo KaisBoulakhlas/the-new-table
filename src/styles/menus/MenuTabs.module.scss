@@ -1,0 +1,56 @@
+.menuTabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  
+  @media (min-width: $breakpoint-sm) {
+    gap: 1rem;
+  }
+  
+  @media (min-width: $breakpoint-md) {
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    gap: 2rem;
+  }
+}
+
+.tab {
+  background-color: transparent;
+  color: $text-color;
+  border: 1px solid rgba(201, 171, 129, 0.3);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  @media (min-width: $breakpoint-sm) {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  @media (min-width: $breakpoint-md) {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  &:hover {
+    background-color: rgba(201, 171, 129, 0.1);
+    border-color: $primary-color;
+  }
+  
+  &.active {
+    background-color: $primary-color;
+    color: $bg-color;
+    border-color: $primary-color;
+    font-weight: 600;
+  }
+}

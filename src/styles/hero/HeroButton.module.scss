@@ -1,0 +1,78 @@
+.buttonWrapper {
+  position: relative;
+  margin-top: 1rem;
+  
+  @media (min-width: $breakpoint-md) {
+    margin-top: 1.5rem;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    margin-top: 2rem;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.8rem;
+  font-family: 'Open Sans', sans-serif;
+  background-color: transparent;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  
+  @media (min-width: $breakpoint-sm) {
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    .diagonalLine {
+      width: 20px;
+      
+      @media (min-width: $breakpoint-md) {
+        width: 30px;
+      }
+      
+      @media (min-width: $breakpoint-lg) {
+        width: 40px;
+      }
+    }
+  }
+}
+
+.diagonalLine {
+  position: absolute;
+  background-color: $primary-color;
+  width: 0;
+  height: 1px;
+  transition: width 0.4s ease-in;
+  
+  &.topLine {
+    top: 0;
+    right: 0;
+    transform: rotate(-45deg);
+    transform-origin: top right;
+  }
+  
+  &.bottomLine {
+    bottom: 0;
+    left: 0;
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+  }
+}

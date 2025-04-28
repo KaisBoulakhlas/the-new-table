@@ -1,0 +1,167 @@
+.footer {
+  padding: 4rem 1rem 2rem;
+  position: relative;
+  
+  @media (min-width: $breakpoint-lg) {
+    padding: 5rem 2rem 2rem;
+  }
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mainFooter {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  place-items:center;
+  
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.column {
+  text-align: center;
+}
+
+.columnTitle {
+  font-family: var(--font-dancing-script), cursive;
+  font-size: 1.5rem;
+  color: $primary-color;
+  margin-bottom: 1.5rem;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-montserrat), sans-serif;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.logoCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid $primary-color;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1rem;
+  
+  .logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.socialIcon {
+  color: $primary-color;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba($primary-color, 0.3);
+  
+  &:hover {
+    background-color: $primary-color;
+    color: #000;
+    transform: translateY(-3px);
+  }
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-montserrat), sans-serif;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  justify-content: center;
+  
+  @media (min-width: $breakpoint-lg) {
+    justify-content: flex-start;
+  }
+  
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.contactIcon {
+  font-size: 1.1rem;
+  color: $primary-color;
+}
+
+.bottomFooter {
+  border-top: 1px solid rgba($primary-color, 0.2);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  
+  @media (min-width: $breakpoint-lg) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.legalLink {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $primary-color;
+  }
+}

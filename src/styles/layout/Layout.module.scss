@@ -1,0 +1,51 @@
+.body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.verticalLine {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #c9ab81;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.leftLine {
+  display: none; 
+  position: fixed;
+  
+  @media (min-width: 1500px) {
+    display: block;
+    left: 130px;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #c9ab81;
+    z-index: 1;
+    opacity: 0.5;
+  }
+}
+
+.rightLine {
+  display: none;
+  position: fixed;
+  
+  @media (min-width: 1500px) {
+    display: block; 
+    right: 130px;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #c9ab81;
+    z-index: 1;
+    opacity: 0.5;
+  }
+}

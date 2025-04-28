@@ -1,0 +1,90 @@
+.menuContainer {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 6rem;
+  position: relative; 
+}
+
+.menuHeader {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  
+  @media (min-width: $breakpoint-md) {
+    padding: 3rem 2rem 4rem;
+  }
+}
+
+.menuTitle {
+  color: $primary-color;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-dancing-script), cursive;
+  
+  @media (min-width: $breakpoint-md) {
+    font-size: 4rem;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    font-size: 5rem;
+  }
+}
+
+.menuSubtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  font-style: italic;
+  font-family: var(--font-dancing-script), cursive;
+  
+  @media (min-width: $breakpoint-md) {
+    font-size: 1.2rem;
+  }
+}
+
+.tabsPlaceholder {
+  height: 0;
+  transition: height 0.3s ease;
+  
+  &.active {
+    height: 20px;
+  }
+}
+
+.tabsContainer {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  position: static; 
+  z-index: 50;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transform: translateY(0);
+  
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    transform: translateY(0);
+    
+    animation: slideDown 0.3s ease forwards;
+  }
+}
+
+.menuSections {
+  min-height: 100vh;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,42 @@
+.main {
+  position: relative;
+  min-height: 100vh;
+}
+
+.pageHeader {
+  text-align: center;
+  padding: 8rem 1rem 3rem;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%);
+  
+  @media (min-width: $breakpoint-md) {
+    padding: 10rem 2rem 4rem;
+  }
+}
+
+.pageTitle {
+  font-size: 3rem;
+  color: $primary-color;
+  margin-bottom: 1rem;
+  font-family: var(--font-dancing-script), cursive;
+  font-weight: 600;
+  
+  @media (min-width: $breakpoint-md) {
+    font-size: 4rem;
+  }
+  
+  @media (min-width: $breakpoint-lg) {
+    font-size: 5rem;
+  }
+}
+
+.pageSubtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: var(--font-montserrat), sans-serif;
+  
+  @media (min-width: $breakpoint-md) {
+    font-size: 1.4rem;
+  }
+}
